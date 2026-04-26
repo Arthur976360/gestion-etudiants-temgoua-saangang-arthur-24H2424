@@ -203,14 +203,7 @@ app.get("/api/etudiants/search", async (req, res) => {
 });
 
 // ================= SERVER =================
-app.get("/", (req, res) => {
-    res.send(`
-        <h1>Projet Gestion Étudiants</h1>
-        <h2>Nom : TEMGOUA</h2>
-        <h2>Prénom : ARTHUR</h2>
-        <h2>Matricule : 24H2424</h2>
-    `);
-});
+
 app.listen(3000, () => {
     console.log("Serveur lancé sur http://localhost:3000");
 });
