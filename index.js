@@ -203,6 +203,15 @@ app.get("/api/etudiants/search", async (req, res) => {
 });
 
 // ================= SERVER =================
+const path = require("path");
+
+// servir les fichiers du dossier public
+app.use(express.static(path.join(__dirname, "public")));
+
+// page d'accueil
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 app.listen(3000, () => {
     console.log("Serveur lancé sur http://localhost:3000");
